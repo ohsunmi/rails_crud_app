@@ -1,0 +1,22 @@
+<h2>The Teachers</h2>
+
+<li><%= link_to "add new teacher", new_teacher_path %></li>
+
+<table border="1">
+	<thead>
+		<th>Name</th>
+		<th>Gender</th>
+		<th>Subject</th>
+	</thead>
+	<tbody>
+		<% @teachers.each do |teacher| %>
+			<tr>
+				<td><%= link_to teacher.name, teacher_path(teacher) %></td>
+				<td><%= teacher.gender %></td>
+				<td><%= teacher.subject %></td>
+				<td><%= button_to 'edit', edit_teacher_path(teacher), :method => :get %></td>
+				<td><%= button_to 'delete', teacher_path(teacher), :method => :delete %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

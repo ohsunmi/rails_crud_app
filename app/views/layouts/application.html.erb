@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crud</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+	<li><%= link_to "students", students_path %></li>
+	<li><%= link_to "teachers", teachers_path %></li>
+	<li><%= link_to "schools", schools_path %></li>
+	<li><%= link_to "home", root_path %></li>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

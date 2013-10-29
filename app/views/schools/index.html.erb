@@ -1,0 +1,19 @@
+<h2>The Schools</h2>
+<li><%= link_to "add new school", new_school_path %></li>
+
+<table border="1">
+	<thead>
+		<th>Name</th>
+		<th>Location</th>
+	</thead>
+	<tbody>
+		<% @schools.each do |school| %>
+			<tr>
+				<td><%= link_to school.name, school_path(school) %></td>
+				<td><%= school.location %></td>
+				<td><%= button_to 'edit', edit_school_path(school), :method => :get %></td>
+				<td><%= button_to 'delete', school_path(school), :method => :delete %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

@@ -1,0 +1,7 @@
+<h2><%= @teacher.name %></h2>
+
+<p><%= @teacher.gender %></p>
+<p><%= @teacher.subject %></p>
+
+<li><%= button_to 'edit', edit_teacher_path(@teacher), :method => :get %></li>
+<li><%= button_to 'delete', teacher_path(@teacher), :method => :delete %></li>

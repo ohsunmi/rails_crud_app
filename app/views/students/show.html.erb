@@ -1,0 +1,6 @@
+<h2><%= @student.name %></h2>
+
+<p><%= @student.age %></p>
+
+<li><%= button_to 'edit', edit_student_path(@student), :method => :get %></li>
+<li><%= button_to 'delete', student_path(@student), :method => :delete %></li>
